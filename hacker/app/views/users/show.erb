@@ -1,0 +1,7 @@
+<h1>Hello, <%= @user.first_name %>!</h1><br>
+<h2>View all of your posts here</h2>
+	<ul>
+	  <% @posts.each do |post| %>
+	   <li> <%= post.title %> </li>
+	  <% end %>
+	</ul>

@@ -1,0 +1,14 @@
+<h1>Welcome to Hacker News!</h1>
+
+<h2>Here are the latest stories:</h2>
+	<ul>
+		<% @posts.each do |post| %>
+			<a href="/posts/<%= post.id %>"><%= post.title %></a><br>
+			<%= post.body %><br>
+			<%= post.author %>
+		<%end %>
+	</ul>
+
+<div>
+<a href="/posts/new">Write a new post!</a>
+</div>

@@ -15,8 +15,15 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>HackerTown</title>
 </head>
+  <p><a href="/">Home</a></p>
+    <% if logged_in? %>
+  <p><%= erb :'/sessions/_logout_link' %></p>
+    <% else %>
+  <p><%= erb :'/sessions/_login_link' %></p>
+    <% end %>
+
 <body>
   <%= yield %>
 </body>
